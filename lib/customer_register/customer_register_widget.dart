@@ -1,4 +1,3 @@
-import '../auth/auth_util.dart';
 import '../backend/api_requests/api_calls.dart';
 import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
@@ -24,10 +23,10 @@ class _CustomerRegisterWidgetState extends State<CustomerRegisterWidget> {
   @override
   void initState() {
     super.initState();
-    cedulaController = TextEditingController(text: '[display_cedula]');
-    direccionController = TextEditingController(text: '[display_direccion]');
-    emailController = TextEditingController(text: currentUserEmail);
-    nameController = TextEditingController(text: '[display_name]');
+    cedulaController = TextEditingController();
+    direccionController = TextEditingController();
+    emailController = TextEditingController();
+    nameController = TextEditingController();
   }
 
   @override
@@ -115,25 +114,26 @@ class _CustomerRegisterWidgetState extends State<CustomerRegisterWidget> {
                   controller: nameController,
                   obscureText: false,
                   decoration: InputDecoration(
-                    labelText: 'Full Name',
-                    labelStyle: FlutterFlowTheme.of(context).bodyText1,
-                    hintText: 'Your full name...',
+                    isDense: true,
+                    labelText: 'Nombres Completos',
+                    labelStyle: FlutterFlowTheme.of(context).bodyText2,
+                    hintText: 'Nombres completos...',
                     hintStyle: FlutterFlowTheme.of(context).bodyText2.override(
                           fontFamily: 'Lexend Deca',
-                          color: Color(0xFF95A1AC),
+                          color: FlutterFlowTheme.of(context).secondaryText,
                           fontSize: 14,
                           fontWeight: FontWeight.normal,
                         ),
                     enabledBorder: OutlineInputBorder(
                       borderSide: BorderSide(
-                        color: Color(0xFFF1F4F8),
+                        color: FlutterFlowTheme.of(context).primaryColor,
                         width: 2,
                       ),
                       borderRadius: BorderRadius.circular(8),
                     ),
                     focusedBorder: OutlineInputBorder(
                       borderSide: BorderSide(
-                        color: Color(0xFFF1F4F8),
+                        color: FlutterFlowTheme.of(context).primaryColor,
                         width: 2,
                       ),
                       borderRadius: BorderRadius.circular(8),
@@ -157,25 +157,26 @@ class _CustomerRegisterWidgetState extends State<CustomerRegisterWidget> {
                   controller: emailController,
                   obscureText: false,
                   decoration: InputDecoration(
+                    isDense: true,
                     labelText: 'Email Address',
-                    labelStyle: FlutterFlowTheme.of(context).bodyText1,
+                    labelStyle: FlutterFlowTheme.of(context).bodyText2,
                     hintText: 'Your email..',
                     hintStyle: FlutterFlowTheme.of(context).bodyText2.override(
                           fontFamily: 'Lexend Deca',
-                          color: Color(0xFF95A1AC),
+                          color: FlutterFlowTheme.of(context).secondaryText,
                           fontSize: 14,
                           fontWeight: FontWeight.normal,
                         ),
                     enabledBorder: OutlineInputBorder(
                       borderSide: BorderSide(
-                        color: Color(0xFFF1F4F8),
+                        color: FlutterFlowTheme.of(context).primaryColor,
                         width: 2,
                       ),
                       borderRadius: BorderRadius.circular(8),
                     ),
                     focusedBorder: OutlineInputBorder(
                       borderSide: BorderSide(
-                        color: Color(0xFFF1F4F8),
+                        color: FlutterFlowTheme.of(context).primaryColor,
                         width: 2,
                       ),
                       borderRadius: BorderRadius.circular(8),
@@ -200,24 +201,24 @@ class _CustomerRegisterWidgetState extends State<CustomerRegisterWidget> {
                   obscureText: false,
                   decoration: InputDecoration(
                     labelText: 'Dirección',
-                    labelStyle: FlutterFlowTheme.of(context).bodyText1,
+                    labelStyle: FlutterFlowTheme.of(context).bodyText2,
                     hintText: 'Ingresa dirección del cliente ',
                     hintStyle: FlutterFlowTheme.of(context).bodyText2.override(
                           fontFamily: 'Lexend Deca',
-                          color: Color(0xFF95A1AC),
+                          color: FlutterFlowTheme.of(context).secondaryText,
                           fontSize: 14,
                           fontWeight: FontWeight.normal,
                         ),
                     enabledBorder: OutlineInputBorder(
                       borderSide: BorderSide(
-                        color: Color(0xFFF1F4F8),
+                        color: FlutterFlowTheme.of(context).primaryColor,
                         width: 2,
                       ),
                       borderRadius: BorderRadius.circular(8),
                     ),
                     focusedBorder: OutlineInputBorder(
                       borderSide: BorderSide(
-                        color: Color(0xFFF1F4F8),
+                        color: FlutterFlowTheme.of(context).primaryColor,
                         width: 2,
                       ),
                       borderRadius: BorderRadius.circular(8),
@@ -242,24 +243,28 @@ class _CustomerRegisterWidgetState extends State<CustomerRegisterWidget> {
                   obscureText: false,
                   decoration: InputDecoration(
                     labelText: 'Cédula',
-                    labelStyle: FlutterFlowTheme.of(context).bodyText1,
+                    labelStyle: FlutterFlowTheme.of(context).bodyText2.override(
+                          fontFamily: 'Poppins',
+                          color: FlutterFlowTheme.of(context).secondaryText,
+                          fontWeight: FontWeight.normal,
+                        ),
                     hintText: 'Ingresa cédula del cliente ',
                     hintStyle: FlutterFlowTheme.of(context).bodyText2.override(
                           fontFamily: 'Lexend Deca',
-                          color: Color(0xFF95A1AC),
+                          color: FlutterFlowTheme.of(context).secondaryText,
                           fontSize: 14,
                           fontWeight: FontWeight.normal,
                         ),
                     enabledBorder: OutlineInputBorder(
                       borderSide: BorderSide(
-                        color: Color(0xFFF1F4F8),
+                        color: FlutterFlowTheme.of(context).primaryColor,
                         width: 2,
                       ),
                       borderRadius: BorderRadius.circular(8),
                     ),
                     focusedBorder: OutlineInputBorder(
                       borderSide: BorderSide(
-                        color: Color(0xFFF1F4F8),
+                        color: FlutterFlowTheme.of(context).primaryColor,
                         width: 2,
                       ),
                       borderRadius: BorderRadius.circular(8),
@@ -269,12 +274,12 @@ class _CustomerRegisterWidgetState extends State<CustomerRegisterWidget> {
                     contentPadding:
                         EdgeInsetsDirectional.fromSTEB(20, 24, 0, 24),
                   ),
-                  style: FlutterFlowTheme.of(context).bodyText1.override(
-                        fontFamily: 'Lexend Deca',
-                        color: Color(0xFF090F13),
-                        fontSize: 14,
-                        fontWeight: FontWeight.normal,
-                      ),
+                  style: GoogleFonts.getFont(
+                    'Lexend Deca',
+                    color: Color(0xFFE21717),
+                    fontWeight: FontWeight.w600,
+                    fontSize: 18,
+                  ),
                 ),
               ),
               Align(

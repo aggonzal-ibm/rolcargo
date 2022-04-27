@@ -113,99 +113,116 @@ class _LoginWidgetState extends State<LoginWidget> {
                                                   crossAxisAlignment:
                                                       CrossAxisAlignment.center,
                                                   children: [
-                                                    TextFormField(
-                                                      controller:
-                                                          emailFieldController,
-                                                      onChanged: (_) =>
-                                                          EasyDebounce.debounce(
-                                                        'emailFieldController',
-                                                        Duration(
-                                                            milliseconds: 2000),
-                                                        () => setState(() {}),
-                                                      ),
-                                                      autofocus: true,
-                                                      obscureText: false,
-                                                      decoration:
-                                                          InputDecoration(
-                                                        labelText: 'Email',
-                                                        labelStyle: TextStyle(
+                                                    Padding(
+                                                      padding:
+                                                          EdgeInsetsDirectional
+                                                              .fromSTEB(
+                                                                  0, 10, 0, 0),
+                                                      child: TextFormField(
+                                                        controller:
+                                                            emailFieldController,
+                                                        onChanged: (_) =>
+                                                            EasyDebounce
+                                                                .debounce(
+                                                          'emailFieldController',
+                                                          Duration(
+                                                              milliseconds:
+                                                                  2000),
+                                                          () => setState(() {}),
+                                                        ),
+                                                        autofocus: true,
+                                                        obscureText: false,
+                                                        decoration:
+                                                            InputDecoration(
+                                                          labelText: 'Email',
+                                                          labelStyle:
+                                                              GoogleFonts
+                                                                  .getFont(
+                                                            'Roboto',
+                                                            color: FlutterFlowTheme
+                                                                    .of(context)
+                                                                .secondaryText,
+                                                            fontWeight:
+                                                                FontWeight
+                                                                    .normal,
+                                                            fontSize: 16,
+                                                          ),
+                                                          hintText: 'Email',
+                                                          hintStyle: GoogleFonts
+                                                              .getFont(
+                                                            'Roboto',
+                                                            color: FlutterFlowTheme
+                                                                    .of(context)
+                                                                .secondaryText,
+                                                            fontWeight:
+                                                                FontWeight
+                                                                    .normal,
+                                                            fontSize: 16,
+                                                          ),
+                                                          enabledBorder:
+                                                              OutlineInputBorder(
+                                                            borderSide:
+                                                                BorderSide(
+                                                              color: FlutterFlowTheme
+                                                                      .of(context)
+                                                                  .primaryColor,
+                                                              width: 1,
+                                                            ),
+                                                            borderRadius:
+                                                                const BorderRadius
+                                                                    .only(
+                                                              topLeft: Radius
+                                                                  .circular(
+                                                                      4.0),
+                                                              topRight: Radius
+                                                                  .circular(
+                                                                      4.0),
+                                                            ),
+                                                          ),
+                                                          focusedBorder:
+                                                              OutlineInputBorder(
+                                                            borderSide:
+                                                                BorderSide(
+                                                              color: FlutterFlowTheme
+                                                                      .of(context)
+                                                                  .primaryColor,
+                                                              width: 1,
+                                                            ),
+                                                            borderRadius:
+                                                                const BorderRadius
+                                                                    .only(
+                                                              topLeft: Radius
+                                                                  .circular(
+                                                                      4.0),
+                                                              topRight: Radius
+                                                                  .circular(
+                                                                      4.0),
+                                                            ),
+                                                          ),
+                                                          prefixIcon: Icon(
+                                                            Icons.mail,
+                                                            color: FlutterFlowTheme
+                                                                    .of(context)
+                                                                .primaryColor,
+                                                          ),
+                                                          suffixIcon: Icon(
+                                                            Icons
+                                                                .alternate_email,
+                                                            color: Color(
+                                                                0xFF757575),
+                                                            size: 22,
+                                                          ),
+                                                        ),
+                                                        style:
+                                                            GoogleFonts.getFont(
+                                                          'Roboto',
                                                           color: FlutterFlowTheme
                                                                   .of(context)
-                                                              .secondaryText,
+                                                              .primaryText,
                                                           fontWeight:
-                                                              FontWeight.w600,
+                                                              FontWeight.normal,
                                                           fontSize: 16,
                                                         ),
-                                                        hintText: 'Email',
-                                                        hintStyle:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .bodyText2
-                                                                .override(
-                                                                  fontFamily:
-                                                                      'Poppins',
-                                                                  fontWeight:
-                                                                      FontWeight
-                                                                          .normal,
-                                                                ),
-                                                        enabledBorder:
-                                                            OutlineInputBorder(
-                                                          borderSide:
-                                                              BorderSide(
-                                                            color: FlutterFlowTheme
-                                                                    .of(context)
-                                                                .primaryColor,
-                                                            width: 1,
-                                                          ),
-                                                          borderRadius:
-                                                              const BorderRadius
-                                                                  .only(
-                                                            topLeft:
-                                                                Radius.circular(
-                                                                    4.0),
-                                                            topRight:
-                                                                Radius.circular(
-                                                                    4.0),
-                                                          ),
-                                                        ),
-                                                        focusedBorder:
-                                                            OutlineInputBorder(
-                                                          borderSide:
-                                                              BorderSide(
-                                                            color: FlutterFlowTheme
-                                                                    .of(context)
-                                                                .primaryColor,
-                                                            width: 1,
-                                                          ),
-                                                          borderRadius:
-                                                              const BorderRadius
-                                                                  .only(
-                                                            topLeft:
-                                                                Radius.circular(
-                                                                    4.0),
-                                                            topRight:
-                                                                Radius.circular(
-                                                                    4.0),
-                                                          ),
-                                                        ),
-                                                        prefixIcon: Icon(
-                                                          Icons.mail,
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .primaryColor,
-                                                        ),
-                                                        suffixIcon: Icon(
-                                                          Icons.alternate_email,
-                                                          color:
-                                                              Color(0xFF757575),
-                                                          size: 22,
-                                                        ),
-                                                      ),
-                                                      style: TextStyle(
-                                                        color:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .primaryText,
                                                       ),
                                                     ),
                                                     Padding(
@@ -240,17 +257,21 @@ class _LoginWidgetState extends State<LoginWidget> {
                                                       decoration:
                                                           InputDecoration(
                                                         labelText: 'Contraseña',
-                                                        labelStyle: TextStyle(
+                                                        labelStyle:
+                                                            GoogleFonts.getFont(
+                                                          'Roboto',
                                                           color: FlutterFlowTheme
                                                                   .of(context)
                                                               .secondaryText,
                                                           fontSize: 16,
                                                         ),
                                                         hintText: 'Contraseña',
-                                                        hintStyle: TextStyle(
+                                                        hintStyle:
+                                                            GoogleFonts.getFont(
+                                                          'Roboto',
                                                           color: FlutterFlowTheme
                                                                   .of(context)
-                                                              .primaryText,
+                                                              .secondaryText,
                                                           fontSize: 16,
                                                         ),
                                                         enabledBorder:
@@ -317,7 +338,9 @@ class _LoginWidgetState extends State<LoginWidget> {
                                                           ),
                                                         ),
                                                       ),
-                                                      style: TextStyle(
+                                                      style:
+                                                          GoogleFonts.getFont(
+                                                        'Roboto',
                                                         color:
                                                             FlutterFlowTheme.of(
                                                                     context)
@@ -481,23 +504,28 @@ class _LoginWidgetState extends State<LoginWidget> {
                                                       txtEmailController,
                                                   obscureText: false,
                                                   decoration: InputDecoration(
-                                                    isDense: true,
                                                     labelText: 'Email',
-                                                    labelStyle: TextStyle(
+                                                    labelStyle:
+                                                        GoogleFonts.getFont(
+                                                      'Roboto',
                                                       color:
                                                           FlutterFlowTheme.of(
                                                                   context)
-                                                              .primaryText,
+                                                              .secondaryText,
                                                       fontWeight:
-                                                          FontWeight.w600,
+                                                          FontWeight.normal,
+                                                      fontSize: 16,
                                                     ),
                                                     hintText:
                                                         'Ingresa un correo nuevo',
-                                                    hintStyle: TextStyle(
+                                                    hintStyle:
+                                                        GoogleFonts.getFont(
+                                                      'Roboto',
                                                       color:
                                                           FlutterFlowTheme.of(
                                                                   context)
-                                                              .primaryText,
+                                                              .secondaryText,
+                                                      fontSize: 16,
                                                     ),
                                                     enabledBorder:
                                                         OutlineInputBorder(
@@ -538,9 +566,13 @@ class _LoginWidgetState extends State<LoginWidget> {
                                                       size: 22,
                                                     ),
                                                   ),
-                                                  style: FlutterFlowTheme.of(
-                                                          context)
-                                                      .bodyText1,
+                                                  style: GoogleFonts.getFont(
+                                                    'Roboto',
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
+                                                        .primaryText,
+                                                    fontSize: 16,
+                                                  ),
                                                   keyboardType: TextInputType
                                                       .emailAddress,
                                                 ),
@@ -561,25 +593,30 @@ class _LoginWidgetState extends State<LoginWidget> {
                                                   obscureText:
                                                       !txtPasswordVisibility,
                                                   decoration: InputDecoration(
-                                                    isDense: true,
                                                     labelText: 'Password',
-                                                    labelStyle: TextStyle(
+                                                    labelStyle:
+                                                        GoogleFonts.getFont(
+                                                      'Roboto',
                                                       color:
                                                           FlutterFlowTheme.of(
                                                                   context)
-                                                              .primaryText,
+                                                              .secondaryText,
                                                       fontWeight:
-                                                          FontWeight.w600,
+                                                          FontWeight.normal,
+                                                      fontSize: 16,
                                                     ),
                                                     hintText:
                                                         'Ingresa un Password',
-                                                    hintStyle: TextStyle(
+                                                    hintStyle:
+                                                        GoogleFonts.getFont(
+                                                      'Roboto',
                                                       color:
                                                           FlutterFlowTheme.of(
                                                                   context)
-                                                              .primaryText,
+                                                              .secondaryText,
                                                       fontWeight:
                                                           FontWeight.w600,
+                                                      fontSize: 16,
                                                     ),
                                                     enabledBorder:
                                                         OutlineInputBorder(
@@ -631,9 +668,13 @@ class _LoginWidgetState extends State<LoginWidget> {
                                                       ),
                                                     ),
                                                   ),
-                                                  style: FlutterFlowTheme.of(
-                                                          context)
-                                                      .bodyText1,
+                                                  style: GoogleFonts.getFont(
+                                                    'Roboto',
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
+                                                        .primaryText,
+                                                    fontSize: 16,
+                                                  ),
                                                   keyboardType: TextInputType
                                                       .emailAddress,
                                                 ),
@@ -654,24 +695,31 @@ class _LoginWidgetState extends State<LoginWidget> {
                                                   obscureText:
                                                       !txtRePasswordVisibility,
                                                   decoration: InputDecoration(
-                                                    isDense: true,
                                                     labelText:
                                                         'Retype Password',
-                                                    labelStyle: TextStyle(
+                                                    labelStyle:
+                                                        GoogleFonts.getFont(
+                                                      'Roboto',
                                                       color:
                                                           FlutterFlowTheme.of(
                                                                   context)
-                                                              .primaryText,
+                                                              .secondaryText,
                                                       fontWeight:
-                                                          FontWeight.w600,
+                                                          FontWeight.normal,
+                                                      fontSize: 16,
                                                     ),
                                                     hintText:
                                                         'Ingresa nuevamente el password',
-                                                    hintStyle: TextStyle(
+                                                    hintStyle:
+                                                        GoogleFonts.getFont(
+                                                      'Roboto',
                                                       color:
                                                           FlutterFlowTheme.of(
                                                                   context)
-                                                              .primaryText,
+                                                              .secondaryText,
+                                                      fontWeight:
+                                                          FontWeight.normal,
+                                                      fontSize: 16,
                                                     ),
                                                     enabledBorder:
                                                         OutlineInputBorder(
@@ -723,9 +771,13 @@ class _LoginWidgetState extends State<LoginWidget> {
                                                       ),
                                                     ),
                                                   ),
-                                                  style: FlutterFlowTheme.of(
-                                                          context)
-                                                      .bodyText1,
+                                                  style: GoogleFonts.getFont(
+                                                    'Roboto',
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
+                                                        .primaryText,
+                                                    fontSize: 16,
+                                                  ),
                                                   keyboardType: TextInputType
                                                       .emailAddress,
                                                 ),
